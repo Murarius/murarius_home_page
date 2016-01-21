@@ -9,3 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+Rails.application.config.assets.precompile += %w( plane.svg )
+Rails.application.config.assets.precompile += %w( ground.svg )
+Rails.application.config.assets.precompile += %w( ground2.svg )
+Rails.application.config.assets.precompile += %w( cloud1.svg )
+Rails.application.config.assets.precompile += %w( cloud2.svg )
+Rails.application.config.assets.precompile += %w( cloud3.svg )
