@@ -53,24 +53,52 @@
   }
 }
 
-.cloud1 {
+.cloud-1 {
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
+  bottom: 0;
+  left: -1000px;
   position: absolute;
+  z-index: -3;
 }
 
-.cloud2 {
+.cloud-2 {
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
   position: absolute;
+  top: 200px;
+  z-index: -1;
 }
 
-.cloud3 {
+.cloud-3 {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
   position: absolute;
+  top: 300px;
 }
 
-.cloud4 {
+.cloud-4 {
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
   position: absolute;
+  top: -80px;
 }
 
-.cloud5 {
+.cloud-5 {
+  animation-duration: 22s;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
   position: absolute;
+  top: 250px;
 }
 
 .author {

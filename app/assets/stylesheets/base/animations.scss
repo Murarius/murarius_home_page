@@ -61,3 +61,14 @@
     top: 200px;
   }
 }
+
+
+@keyframes cloud {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 3000px;
+  }
+}
