@@ -1,0 +1,37 @@
+body {
+  @media screen and (max-width: 1500px) {
+    .container {
+      width: 1000px;
+    }
+
+    .author {
+      display: none;
+    }
+
+    .author-1000 {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .container {
+      width: 600px;
+    }
+
+    .author {
+      display: none;
+    }
+
+    .author-1000 {
+      display: none;
+    }
+
+    .author-500 {
+      display: block;
+    }
+
+    .main {
+      width: 600px;
+    }
+  }
+}
