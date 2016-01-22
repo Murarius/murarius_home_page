@@ -110,13 +110,16 @@
 
 .ground {
   background-image: url('ground2.svg');
-  background-position: center;
+  //background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
+  background-size: contain;
   bottom: 0;
   min-height: 300px;
   position: absolute;
   width: 100%;
   z-index: -1;
+
 }
 
 .ground-fill {
