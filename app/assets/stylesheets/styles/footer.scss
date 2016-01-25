@@ -1,0 +1,104 @@
+footer {
+  font-family: 'Oxygen', sans-serif;
+  height: 300px;
+  margin-top: 50px;
+  position: relative;
+
+  .footer-content {
+    margin: 0 auto;
+    padding: 20px 20px 0 0;
+    position: relative;
+    width: 960px;
+  }
+
+  .footer-plane {
+    color: $main-red;
+    position: absolute;
+    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
+                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+
+    img {
+      filter: FlipH;
+      transform: scaleX(-1);
+    }
+  }
+
+  ul {
+    color: $footer-main-text;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 300px;
+    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
+                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+
+    div {
+      display: inline-block;
+      text-align: center;
+      width: 60px;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  .footer-media {
+    color: $footer-main-text;
+    float: right;
+    font-size: 25px;
+    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
+                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+
+    div {
+      display: inline-block;
+      text-align: center;
+      width: 60px;
+    }
+  }
+
+  .footer-author {
+    bottom: 0;
+    color: $footer-main-text;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-shadow: $black 0 0 1px;
+
+    span {
+      display: inline-block;
+      text-align: center;
+      width: 40px;
+    }
+  }
+}
+
+.footer-main {
+  background-image: url('footer.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.footer-background-fill {
+  background-color: $ground-color;
+  border-top: 7px solid $ground-border;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  max-height: 300px;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
