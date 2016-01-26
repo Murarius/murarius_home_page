@@ -11,6 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( plane.svg )
+Rails.application.config.assets.precompile += %w( plane-shadow.svg )
 Rails.application.config.assets.precompile += %w( ground.svg )
 Rails.application.config.assets.precompile += %w( ground2.svg )
 Rails.application.config.assets.precompile += %w( cloud1.svg )

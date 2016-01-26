@@ -1,67 +1,55 @@
+%shadow-1-6 {
+  text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
+               $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+}
+
 footer {
+  color: $footer-main-text;
   font-family: 'Oxygen', sans-serif;
   height: 300px;
   margin-top: 50px;
   position: relative;
 
-  .footer-content {
-    margin: 0 auto;
-    padding: 20px 20px 0 0;
-    position: relative;
-    width: 960px;
-  }
-
-  .footer-plane {
-    color: $main-red;
-    position: absolute;
-    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
-                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
-
-    img {
-      filter: FlipH;
-      transform: scaleX(-1);
-    }
-  }
-
-  ul {
+  a {
     color: $footer-main-text;
-    float: left;
-    font-size: 30px;
-    font-weight: bold;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 300px;
-    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
-                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+    position: relative;
+    text-decoration: none;
 
-    div {
+    i {
+      bottom: 0;
       display: inline-block;
+      left: -50px;
+      line-height: 50px;
+      position: absolute;
       text-align: center;
-      width: 60px;
+      transition: font-size .3s ease;
+      width: 50px;
     }
 
-    li {
-      padding: 5px 0;
+    &:hover {
+      color: lighten($footer-main-text, 20%);
+
+      i {
+        animation-duration: .2s;
+        animation-iteration-count: infinite;
+        animation-name: light;
+        animation-timing-function: linear;
+
+        bottom: 0;
+        font-size: 45px;
+        transition: font-size .3s ease;
+      }
     }
   }
 
   .footer-media {
-    color: $footer-main-text;
+    @extend %shadow-1-6;
     float: right;
     font-size: 25px;
-    text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
-                 $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
-
-    div {
-      display: inline-block;
-      text-align: center;
-      width: 60px;
-    }
   }
 
   .footer-author {
     bottom: 0;
-    color: $footer-main-text;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -69,11 +57,55 @@ footer {
     right: 0;
     text-align: right;
     text-shadow: $black 0 0 1px;
+  }
+}
 
-    span {
-      display: inline-block;
-      text-align: center;
-      width: 40px;
+.footer-plane {
+  animation-delay: 5s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: footer-plane;
+  animation-timing-function: linear;
+
+  bottom: 0;
+  position: absolute;
+  transform: rotate(-20deg);
+  z-index: 2;
+
+  img {
+    filter: FlipH;
+    transform: scaleX(-1);
+  }
+}
+
+.footer-plane-shadow {
+  animation-delay: 5s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: footer-plane-shadow;
+  animation-timing-function: linear;
+
+  bottom: 0;
+  position: absolute;
+}
+
+.footer-content {
+  margin: 0 auto;
+  padding: 20px 20px 0 0;
+  position: relative;
+  width: 960px;
+
+  .footer-menu {
+    @extend %shadow-1-6;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 300px;
+
+    li {
+      padding: 5px 0;
     }
   }
 }
@@ -88,7 +120,6 @@ footer {
   width: 100%;
   z-index: -1;
 }
-
 
 .footer-background-fill {
   background-color: $ground-color;
