@@ -1,14 +1,21 @@
 jQuery(function() {
   $('nav').hide();
 
-  var position = $('.main').position().top;
-
   $(window).scroll(function() {
+    var position = $('.main').position().top;
+
     if ($(window).scrollTop() > position) {
       $('nav').fadeIn();
     } else {
       $('nav').fadeOut();
     }
+  });
+
+  $('.goto').on('click', function(e){
+    e.preventDefault();
+    var destination = $(this).attr('href');
+    var destination_position = $(destination).offset().top - 50;
+    $("html, body").animate({ scrollTop: destination_position }, 500);
   });
 
 });
