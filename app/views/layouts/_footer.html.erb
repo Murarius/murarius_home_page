@@ -16,7 +16,7 @@
       <div class='footer-author'>
         Created by Murarius
         <% if logged_in? -%>
-          <a href='#'><span class="fa fa-power-off"></span></a>
+          <%= link_to "<span class='fa fa-power-off'></span>".html_safe, logout_path, method: :delete %>
         <% else -%>
           <%= link_to "<span class='fa fa-cogs'></span>".html_safe, login_path %>
         <% end -%>
