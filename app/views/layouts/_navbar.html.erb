@@ -10,8 +10,11 @@
     </ul>
 
     <div class='navbar-login'>
-      <a href="#"><i class="fa fa-cogs"></i></a>
-      <a href="#"><i class="fa fa-power-off"></i></a>
+      <% if logged_in? -%>
+        <a href='#'><i class="fa fa-power-off"></i></a>
+      <% else -%>
+        <%= link_to "<i class='fa fa-cogs'></i>".html_safe, login_path %>
+      <% end -%>
     <div>
   </div>
 </nav>
