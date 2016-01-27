@@ -1,0 +1,17 @@
+<div class='content'>
+  <h1>Log in</h1>
+  <div>
+    <div id='login_form'>
+      <div id='flash'></div>
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :login %>
+        <%= f.text_field :login, autofocus: true%>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <div class='login-button'>
+          <%= f.submit 'Log in', class: 'btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

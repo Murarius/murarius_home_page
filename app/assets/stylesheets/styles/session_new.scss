@@ -1,0 +1,55 @@
+.content {
+  // border: 1px solid pink;
+  background-color: lighten($ground-color, 40%);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 600px;
+
+  h1 {
+    color: $ground-border;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  #login_form {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  label {
+    color: $ground-border;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 100%;
+ }
+
+  input {
+    background-color: lighten($ground-color, 40%);
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    padding: 3px;
+
+    &:active,
+    &:focus {
+      background-color: lighten($ground-color, 30%);
+      border: 3px solid $ground-color;
+      outline: 0;
+    }
+  }
+
+  .btn {
+    background-color: $ground-color;
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 20px;
+
+    &:hover {
+      background-color: lighten($ground-color, 20%);
+    }
+  }
+}
