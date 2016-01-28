@@ -2,7 +2,7 @@ jQuery(function() {
   $('nav').hide();
 
   $(window).scroll(function() {
-    var position = $('.main').position().top;
+    var position = $('.main').offset().top;
 
     if ($(window).scrollTop() > position) {
       $('nav').fadeIn();

@@ -8,7 +8,6 @@
       <li><a class='goto' href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
       <li><a class='goto' href="#"><i class="fa fa-github"></i>My Github</a></li>
     </ul>
-
     <div class='navbar-login'>
       <% if logged_in? -%>
         <%= link_to "<i class='fa fa-power-off'></i>".html_safe, logout_path, method: :delete %>
