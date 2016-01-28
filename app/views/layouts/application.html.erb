@@ -10,6 +10,7 @@
 <%= render 'layouts/header' %>
 <%= render 'layouts/navbar' %>
 <div class='main'>
+  <div id='flash'><%= render 'shared/flash_messages' %></div>
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>

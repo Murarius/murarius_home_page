@@ -1,0 +1,10 @@
+<% flash.each do |type, message| -%>
+  <div class='flash flash-<%= type %>'>
+    <% if type == 'success' -%>
+      <i class="fa fa-star"></i>
+    <% elsif type == 'error' -%>
+      <i class="fa fa-exclamation-triangle"></i>
+    <% end -%>
+    <%= message %>
+  </div>
+<% end if flash.count > 0 -%>
