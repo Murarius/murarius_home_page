@@ -2,11 +2,11 @@
 class Owner < ActiveRecord::Base
   has_secure_password
 
-  def Owner.new_remember_token
+  def self.new_remember_token
     SecureRandom.urlsafe_base64
   end
 
-  def Owner.digest(token)
+  def self.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
 
