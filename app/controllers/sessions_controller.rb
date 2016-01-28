@@ -6,8 +6,9 @@ class SessionsController < ApplicationController
 
   def create
     owner = Owner.find_by(login: params[:session][:login].downcase)
-    if owner && owner.authenticate(params[:session][:password])
-      sign_in owner
+    if owner_with_good_password?(owner)
+      log_in owner
+      flash[:success] = "Welcome #{@current_owner.login} !!!"
       redirect_to root_url
     else
       flash.now[:error] = 'Invalid login/password combination'
@@ -18,5 +19,11 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_url
+  end
+
+  private
+
+  def owner_with_good_password?(owner)
+    owner && owner.authenticate(params[:session][:password]) ? true : false
   end
 end

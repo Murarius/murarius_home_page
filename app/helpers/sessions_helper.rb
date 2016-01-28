@@ -1,36 +1,34 @@
 # module SessionsHelper
 module SessionsHelper
-  def sign_in(user)
+  def log_in(owner)
     remember_token = Owner.new_remember_token
     session[:remember_token] = remember_token
-    user.update_attribute(:remember_token, Owner.digest(remember_token))
-    self.current_user = user
+    owner.update_attribute(:remember_token, Owner.digest(remember_token))
+    self.current_owner = owner
   end
 
   def logged_in?
-    !current_user.nil?
+    !current_owner.nil?
   end
 
-  def current_user=(user)
-    @current_user = user
+  def current_owner=(owner)
+    @current_owner = owner
   end
 
-  def current_user
+  def current_owner
     remember_token = Owner.digest(session[:remember_token])
-    @current_user ||= Owner.find_by(remember_token: remember_token)
+    @current_owner ||= Owner.find_by(remember_token: remember_token)
   end
 
-  def logged_in_user
+  def must_be_logged_in
     return if logged_in?
-    # store_location
     flash[:danger] = 'Please log in.'
     redirect_to root_url
   end
 
   def sign_out
-    current_user.update_attribute(:remember_token,
-                                  Owner.digest(Owner.new_remember_token))
+    current_owner.update_attribute(:remember_token, Owner.digest(Owner.new_remember_token))
     session.delete(:remember_token)
-    self.current_user = nil
+    self.current_owner = nil
   end
 end
