@@ -4,7 +4,7 @@ jQuery(function() {
   $(window).scroll(function() {
     var position = $('.main').offset().top;
 
-    if ($(window).scrollTop() > position) {
+    if ($(window).scrollTop() > position - 100) {
       $('nav').fadeIn();
     } else {
       $('nav').fadeOut();
