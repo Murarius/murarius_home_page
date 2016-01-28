@@ -69,3 +69,10 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+# rspec_log_in(owner)
+def rspec_log_in(owner)
+  remember_token = Owner.new_remember_token
+  session[:remember_token] = remember_token
+  owner.update_attribute(:remember_token, Owner.digest(remember_token))
+end
