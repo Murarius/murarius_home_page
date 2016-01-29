@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id='flash-main'><%= render 'shared/flash_messages' %></div>
 <%= render 'layouts/header' %>
 <%= render 'layouts/navbar' %>
 <div class='main'>
-  <div id='flash'><%= render 'shared/flash_messages' %></div>
   <%= yield %>
 </div>
 <%= render 'layouts/footer' %>

@@ -3,21 +3,23 @@
   width: 960px;
 }
 
+#flash-main {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
 .flash {
-  border-radius: 10px;
-  margin: 10px;
+  border-radius: 0;
+  margin: 0;
   padding: 10px;
-  text-align: left;
 
   &.flash-error {
-    background-color: $error-background;
-    border: 3px solid $main-red;
-    color: $main-red;
+    @include flash-styling($main-red, $error-background);
   }
 
   &.flash-success {
-    background-color: $success-background;
-    border: 3px solid $success-border;
-    color: $success-border;
+    @include flash-styling($success-border, $success-background);
   }
 }

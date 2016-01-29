@@ -1,0 +1,17 @@
+@mixin flash-styling($border-color, $background-color) {
+  background-color: $background-color;
+  border-top: 3px solid $border-color;
+
+  color: $border-color;
+
+  div {
+    margin: 0 auto;
+    text-align: left;
+    width: 960px;
+
+    .close {
+      color: $border-color;
+      float: right;
+    }
+  }
+}
