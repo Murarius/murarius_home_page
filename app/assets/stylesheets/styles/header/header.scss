@@ -132,3 +132,60 @@
   width: 100%;
   z-index: -2;
 }
+
+
+.header-nav {
+  bottom: 0;
+  font-size: 35px;
+  position: absolute;
+  right: 0;
+
+  div {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 230px;
+
+    a {
+      @extend %shadow-1-6;
+      background-color: rgba(212, 0, 0, .6);
+      box-sizing: border-box;
+      color: $footer-main-text;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 50px;
+      z-index: 2;
+
+      &:hover i {
+        animation-duration: .2s;
+        animation-iteration-count: infinite;
+        animation-name: light;
+        animation-timing-function: linear;
+      }
+
+      &:hover + span {
+        background-color: rgba(255, 255, 0, .6);
+        color: $main-red;
+        display: inline-block;
+        left: 0;
+        text-shadow: $black 0 0 1px;
+        transition: all .3s;
+        width: 100%;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-weight: bold;
+      left: 230px;
+      line-height: 50px;
+      padding-left: 5px;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

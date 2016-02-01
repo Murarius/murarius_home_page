@@ -15,3 +15,8 @@
     }
   }
 }
+
+%shadow-1-6 {
+  text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
+               $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
+}
