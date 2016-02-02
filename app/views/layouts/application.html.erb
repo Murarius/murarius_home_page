@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MurariusHomePage</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div id='flash-main'><%= render 'shared/flash_messages' %></div>
-<%= render 'layouts/header' %>
-<%= render 'layouts/navbar' %>
-<div class='main'>
-  <%= yield %>
-</div>
-<%= render 'layouts/footer' %>
-</body>
+  <head>
+    <title>MurariusHomePage</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id='flash-main'><%= render 'shared/flash_messages' %></div>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/navbar' %>
+    <div class='main'>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+    <div id='login_dialog' title='Login'></div>
+  </body>
 </html>

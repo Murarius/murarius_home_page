@@ -1,7 +1,10 @@
 # class SessionsController < ApplicationController
 class SessionsController < ApplicationController
   def new
-    render layout: 'short_layout'
+    respond_to do |format|
+      format.html { render layout: 'short_layout' }
+      format.js
+    end
   end
 
   def create
