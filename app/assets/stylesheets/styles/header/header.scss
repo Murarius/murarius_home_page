@@ -148,7 +148,8 @@
 
     a {
       @extend %shadow-1-6;
-      background-color: rgba(212, 0, 0, .6);
+      background-color: $main-red;
+      border-left: 4px solid $black;
       box-sizing: border-box;
       color: $footer-main-text;
       display: inline-block;
@@ -160,6 +161,15 @@
       width: 50px;
       z-index: 2;
 
+      + span {
+        transition: all .3s;
+      }
+
+      &:hover {
+        background-color: lighten($main-red, 20%);
+        border-left: 4px solid $white;
+      }
+
       &:hover i {
         animation-duration: .2s;
         animation-iteration-count: infinite;
@@ -168,7 +178,7 @@
       }
 
       &:hover + span {
-        background-color: rgba(255, 255, 0, .6);
+        background-color: rgba(255, 255, 255, .6);
         color: $main-red;
         display: inline-block;
         left: 0;
