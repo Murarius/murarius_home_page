@@ -20,14 +20,17 @@ class SessionsController < ApplicationController
 
     respond_to do |format|
       format.html { @login_success ? redirect_to(root_url) : render('new', layout: 'short_layout') }
-      format.js { @login_success }
+      format.js
     end
   end
 
   def destroy
     flash[:success] = "#{current_owner.login} Logged out!!!"
     sign_out
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to root_url }
+      format.js
+    end
   end
 
   private

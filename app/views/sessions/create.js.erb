@@ -3,9 +3,10 @@
   $('#footer_div').html("<%= escape_javascript(render 'layouts/footer' ) %>");
   $('#navbar_div').html("<%= escape_javascript(render 'layouts/navbar' ) %>");
   $('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");
-
 <% else %>
   $('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");
   $('#session_login').val('');
   $('#session_password').val('');
 <% end %>
+
+<% flash.clear %>

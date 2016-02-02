@@ -18,7 +18,7 @@ RSpec.describe SessionsController, type: :controller do
     end
 
     it 'renders with content' do
-      expect(response.body).to have_content('Log in')
+      expect(response.body).to have_content('Login    ')
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe SessionsController, type: :controller do
         expect(response).to render_template('sessions/new')
         expect(response).to render_template('layouts/short_layout')
         expect(response).to have_http_status(:ok)
-        expect(response.body).to have_content('Log in')
+        expect(response.body).to have_content('Login')
       end
       it 'has flash error message' do
         expect(response.body).to have_content('Invalid')

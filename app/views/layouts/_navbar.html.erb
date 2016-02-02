@@ -10,7 +10,7 @@
     </ul>
     <div class='navbar-login'>
       <% if logged_in? -%>
-        <%= link_to "<i class='fa fa-power-off'></i>".html_safe, logout_path, method: :delete %>
+        <%= link_to "<i class='fa fa-power-off'></i>".html_safe, logout_path, remote: true, method: :delete %>
       <% else -%>
         <%= link_to "<i class='fa fa-cogs'></i>".html_safe, login_path, remote: true, class: 'login_click' %>
       <% end -%>
