@@ -136,9 +136,19 @@
 
 .header-nav {
   bottom: 0;
-  font-size: 35px;
+  font-size: 30px;
   position: absolute;
   right: 0;
+
+  div:first-of-type a {
+    border-top: 4px solid $black;
+    border-radius: 15px 0 0;
+  }
+
+  div:last-of-type a {
+    border-bottom: 4px solid $black;
+
+  }
 
   div {
     height: 50px;
@@ -150,6 +160,7 @@
       @extend %shadow-1-6;
       background-color: $main-red;
       border-left: 4px solid $black;
+      border-right: 4px solid $black;
       box-sizing: border-box;
       color: $footer-main-text;
       display: inline-block;
