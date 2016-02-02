@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/dialog
 //= require turbolinks
 //= require_tree .
