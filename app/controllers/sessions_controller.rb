@@ -12,10 +12,15 @@ class SessionsController < ApplicationController
     if owner_with_good_password?(owner)
       log_in owner
       flash[:success] = "Welcome #{@current_owner.login} !!!"
-      redirect_to root_url
+      @login_success = true
     else
       flash.now[:error] = 'Invalid login/password combination'
-      render 'new', layout: 'short_layout'
+      @login_success = false
+    end
+
+    respond_to do |format|
+      format.html { @login_success ? redirect_to(root_url) : render('new', layout: 'short_layout') }
+      format.js { @login_success }
     end
   end
 

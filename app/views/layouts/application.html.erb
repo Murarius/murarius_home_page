@@ -9,11 +9,11 @@
   <body>
     <div id='flash-main'><%= render 'shared/flash_messages' %></div>
     <%= render 'layouts/header' %>
-    <%= render 'layouts/navbar' %>
+    <div id='navbar_div'><%= render 'layouts/navbar' %></div>
     <div class='main'>
       <%= yield %>
     </div>
-    <%= render 'layouts/footer' %>
+    <div id='footer_div'><%= render 'layouts/footer' %></div>
     <div id='login_dialog' title='Login'></div>
   </body>
 </html>
