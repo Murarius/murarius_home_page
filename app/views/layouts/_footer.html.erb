@@ -18,7 +18,7 @@
         <% if logged_in? -%>
           <%= link_to "<span class='fa fa-power-off'></span>".html_safe, logout_path, method: :delete %>
         <% else -%>
-          <%= link_to "<span class='fa fa-cogs'></span>".html_safe, login_path %>
+          <%= link_to "<span class='fa fa-cogs'></span>".html_safe, login_path , remote: true, class: 'login_click' %>
         <% end -%>
       </div>
       <div style='clear:both;'></div>
