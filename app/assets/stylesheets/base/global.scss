@@ -1,6 +1,13 @@
 .main {
   margin: 100px auto 0;
   width: 960px;
+
+  h1 {
+    color: $main-red;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+    text-shadow: 1px 0 0 $black, -1px 0 0 $black, 0 1px 0 $black, 0 -1px 0 $black;
+  }
 }
 
 #flash-main {
