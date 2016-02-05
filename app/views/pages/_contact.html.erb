@@ -3,15 +3,15 @@
   <%= form_for @message, url: contact_message_path, method: :post do |f| %>
     <%= render 'shared/error_messages', object: @message %>
     <div>
-      <%= f.label :from %><br>
+      <%= f.label :from %>
       <%= f.text_field :from, autocomplete: 'off' %>
     </div>
     <div>
-      <%= f.label :subject %><br>
+      <%= f.label :subject %>
       <%= f.text_field :subject, autocomplete: 'off' %>
     </div>
     <div>
-      <%= f.label :content %><br>
+      <%= f.label :content %>
       <%= f.text_area :content,  rows: '5' %>
     </div>
     <div>
