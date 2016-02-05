@@ -40,6 +40,7 @@ footer {
   .footer-media {
     @extend %shadow-1-6;
     float: right;
+    margin-top: 10px;
     font-size: 25px;
   }
 
