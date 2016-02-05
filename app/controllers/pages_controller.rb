@@ -6,7 +6,12 @@ class PagesController < ApplicationController
 
   def contact_message
     @message = Message.new(params[:message][:from], params[:message][:subject], params[:message][:content])
-    SimpleMailer.send_message(@message).deliver_later
-    render 'start'
+    if @message.valid?
+      SimpleMailer.send_message(@message).deliver_later
+      flash[:success] = 'Contact message sent...'
+      redirect_to root_url
+    else
+      render 'start'
+    end
   end
 end

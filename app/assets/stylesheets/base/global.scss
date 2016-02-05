@@ -30,3 +30,42 @@
     @include flash-styling($success-border, $success-background);
   }
 }
+
+
+#error-main {
+  background-color: $error-background;
+  border-top: 3px solid $main-red;
+  bottom: 0;
+  color: $main-red;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+
+  h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  ul {
+    margin: 10px 0 0;
+  }
+
+  li {
+    font-size: 12px;
+  }
+
+  .error-explanation {
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 10px;
+    width: 960px;
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+}

@@ -9,6 +9,10 @@ class Message
   attr_accessor :subject
   attr_accessor :content
 
+  validates :from, presence: true
+  validates :subject, presence: true
+  validates :content, presence: true
+
   @all = []
   def self.all
     @all
