@@ -14,6 +14,11 @@
       <%= f.label :content %>
       <%= f.text_area :content,  rows: '5' %>
     </div>
+
+    <%= f.label :humanizer_answer, @message.humanizer_question %>
+    <%= f.text_field :humanizer_answer %>
+    <%= f.hidden_field :humanizer_question_id %>
+
     <div>
       <%= button_tag(type: 'submit', class: 'btn') do %>
         Accept
