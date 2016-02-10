@@ -10,7 +10,8 @@ class PagesController < ApplicationController
 
     @message = Message.new(bypass_humanizer, message_params(params[:message]))
     if @message.valid?
-      SimpleMailer.send_message(@message).deliver_later
+      SendMessageJob.perform_later(@message)
+      # SimpleMailer.send_message(@message).deliver_later
       flash[:success] = 'Contact message sent...'
       redirect_to root_url
     else

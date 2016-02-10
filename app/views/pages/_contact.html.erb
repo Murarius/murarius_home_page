@@ -16,7 +16,7 @@
     </div>
     <div class='captha'>
       <%= f.label :humanizer_answer, 'Anti Spam question: ' + @message.humanizer_question %>
-      <%= f.text_field :humanizer_answer %>
+      <%= f.text_field :humanizer_answer, autocomplete: 'off' %>
       <%= f.hidden_field :humanizer_question_id %>
     </div>
     <div>
