@@ -1,0 +1,10 @@
+<div class='project'>
+  <%= project.name %>
+  <%= project.thumb %>
+  <%= project.description %>
+  <%= project.when_created %>
+  <%= project.github_link %>
+  <%= project.demo_link %>
+  <%= link_to "edit", edit_project_path(project) %>
+  <%= link_to "delete", project, method: :delete %>
+</div>

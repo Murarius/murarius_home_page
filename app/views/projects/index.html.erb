@@ -1,0 +1,8 @@
+<h1>All Projects</h1>
+
+<% @projects.each do |project| %>
+  <%= render project %>
+<% end -%>
+
+<%= link_to "Back...", root_path %>
+<%= link_to "New Project", new_project_path %>

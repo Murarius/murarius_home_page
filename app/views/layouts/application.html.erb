@@ -15,5 +15,9 @@
     </div>
     <div id='footer_div'><%= render 'layouts/footer' %></div>
     <div id='login_dialog' title='Login'></div>
+
+    <% if logged_in? -%>
+      <%= render 'shared/projects_controll' %>
+    <% end -%>
   </body>
 </html>

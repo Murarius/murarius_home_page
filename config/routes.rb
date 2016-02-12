@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   root 'pages#start'
 
+  resources :projects, only: [:index, :new, :create, :edit, :update, :destroy]
   get 'login'       => 'sessions#new'
   post 'login'      => 'sessions#create'
   delete 'logout'   => 'sessions#destroy'
