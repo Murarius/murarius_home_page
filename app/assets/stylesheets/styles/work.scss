@@ -125,3 +125,18 @@
 
   }
 }
+
+.project {
+  margin-bottom: 80px;
+}
+
+.project-description {
+  text-align: justify;
+}
+
+.project-date {
+  color: $ground-border;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
+}
