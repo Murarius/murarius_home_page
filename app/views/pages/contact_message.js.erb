@@ -1,0 +1,11 @@
+$('#contact').html("<%= escape_javascript(render 'pages/contact') %>");
+$('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");
+
+<% if @message.valid? %>
+  $('#message_from').val('');
+  $('#message_subject').val('');
+  $('#message_content').val('');
+  $('#message_humanizer_answer').val('');
+<% end %>
+
+<% flash.clear %>

@@ -7,15 +7,15 @@ class PagesController < ApplicationController
 
   def contact_message
     bypass_humanizer = false
-
     @message = Message.new(bypass_humanizer, message_params(params[:message]))
-    if @message.valid?
-      SendMessageJob.perform_later(@message)
-      # SimpleMailer.send_message(@message).deliver_later
-      flash[:success] = 'Contact message sent...'
-      redirect_to root_url
-    else
-      render 'start'
+
+    respond_to do |format|
+      format.html do
+        @message.valid? ? contact_message_html_success(@message) : render('start')
+      end
+      format.js do
+        contact_message_js_success(@message) if @message.valid?
+      end
     end
   end
 
@@ -29,5 +29,16 @@ class PagesController < ApplicationController
     message[:humanizer_question_id] = message_params[:humanizer_question_id]
     message[:humanizer_answer] = message_params[:humanizer_answer]
     message
+  end
+
+  def contact_message_html_success(message)
+    SendMessageJob.perform_later(message)
+    flash[:success] = 'Contact message sent...'
+    redirect_to root_url
+  end
+
+  def contact_message_js_success(message)
+    SendMessageJob.perform_later(message)
+    flash.now[:success] = 'Contact message sent...'
   end
 end
