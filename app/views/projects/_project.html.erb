@@ -1,10 +1,22 @@
 <div class='project'>
-  <%= project.name %>
-  <%= project.thumb %>
-  <%= project.description %>
-  <%= project.when_created %>
-  <%= project.github_link %>
-  <%= project.demo_link %>
-  <%= link_to "edit", edit_project_path(project) %>
-  <%= link_to "delete", project, method: :delete %>
+  <div class='project-name'><%= project.name %></div>
+  <div class='project-content'>
+    <%#= project.thumb %>
+    <div class='thumb'></div>
+    <%= project.description %>
+    <div style='clear:both;'></div>
+  </div>
+  <div>
+    <div class='link'>Github link: <%= link_to project.github_link, "http://"+project.github_link %></div>
+    <div class='link'>Live demo link: <%= link_to project.demo_link, "http://"+project.github_link %></div>
+    <div style='clear:both;'></div>
+  </div>
+  <div class='when'>
+    <%= project.when_created %>
+  </div>
+
+  <div class='project-buttons'>
+    <%= link_to "edit", edit_project_path(project), class: 'edit' %>
+    <%= link_to "delete", project, method: :delete, class: 'delete' %>
+  </div>
 </div>

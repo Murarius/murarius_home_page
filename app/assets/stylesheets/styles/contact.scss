@@ -45,8 +45,11 @@
     background-color: $ground-color;
     border: 3px solid $ground-border;
     border-radius: 5px;
+    color: $black;
+    margin-left: 5px;
     margin-top: 10px;
     padding: 5px 20px;
+    text-decoration: none;
 
     &:hover {
       background-color: lighten($ground-color, 20%);

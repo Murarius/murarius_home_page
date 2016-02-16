@@ -1,8 +1,15 @@
-<h1>All Projects</h1>
+<div id='all-projects'>
+  <h1>All Projects</h1>
 
-<% @projects.each do |project| %>
-  <%= render project %>
-<% end -%>
+  <% @projects.each do |project| %>
+    <%= render project %>
+  <% end -%>
 
-<%= link_to "Back...", root_path %>
-<%= link_to "New Project", new_project_path %>
+  <%= link_to(new_project_path, class: 'btn') do %>
+    <i class="fa fa-plus"></i> New Project
+  <% end %>
+
+  <%= link_to(root_url, class: 'btn') do %>
+    <i class="fa fa-chevron-left"></i> Back
+  <% end %>
+</div>
