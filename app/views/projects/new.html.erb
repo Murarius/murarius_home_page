@@ -1,38 +1,4 @@
 <div id='new-project'>
-  <h1>Projects#new</h1>
-  <%= form_for @project do |f| %>
-    <%= render 'shared/error_messages', object: @project %>
-    <div>
-      <%= f.label :name %>
-      <%= f.text_field :name, autocomplete: 'off' %>
-    </div>
-    <div>
-      <%= f.label :thumb %>
-      <%= f.text_field :thumb, autocomplete: 'off' %>
-    </div>
-    <div>
-      <%= f.label :github_link %>
-      <%= f.text_field :github_link, autocomplete: 'off' %>
-    </div>
-    <div>
-      <%= f.label :demo_link %>
-      <%= f.text_field :demo_link, autocomplete: 'off' %>
-    </div>
-    <div>
-      <%= f.label :when_created %>
-      <%= f.text_field :when_created, autocomplete: 'off' %>
-    </div>
-    <div>
-      <%= f.label :description %>
-      <%= f.text_area :description,  rows: '5' %>
-    </div>
-    <div>
-      <%= button_tag(type: 'submit', class: 'btn') do %>
-        <i class="fa fa-check"></i> Accept
-      <% end %>
-      <%= link_to(root_url, class: 'btn') do %>
-        <i class="fa fa-chevron-left"></i> Back
-      <% end %>
-    </div>
-  <% end %>
+  <h1>New Project</h1>
+  <%= render 'form' %>
 </div>

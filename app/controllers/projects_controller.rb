@@ -10,7 +10,8 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to root_url, success: 'Project was successfully created.'
+      flash[:success] = 'Project was successfully created.'
+      redirect_to root_url
     else
       render('new', layout: 'short_layout')
     end
@@ -29,9 +30,18 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project = Project.find(params[:id])
+    render('edit', layout: 'short_layout')
   end
 
   def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:success] = 'Project was successfully edited.'
+      redirect_to root_url
+    else
+      render('edit', layout: 'short_layout')
+    end
   end
 
   private
