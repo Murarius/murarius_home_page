@@ -1,0 +1,19 @@
+<div class='project'>
+  <div class='thumb-container'>
+    <div class='thumb-box'></div>
+    <h2><%= project.name %></h2>
+    <div class='project-thumb'></div>
+    <div class='thumb-navigation'>
+      <div><a href='<%= project.github_link %>'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
+      <div><a href='<%= project.demo_link %>'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>
+      <div style='clear:both'></div>
+    </div>
+  </div>
+  <div class='project-info'>
+    <p class='project-description'>
+      <%= project.description %>
+    </p>
+    <p class='project-date'><%= project.when_created %></a>
+  </div>
+  <div style='clear:both'></div>
+</div>

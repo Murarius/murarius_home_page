@@ -83,9 +83,7 @@
   @extend #contact;
 }
 
-.project {
-  border-bottom: 1px solid $grey;
-  position: relative;
+#all-projects {
 
 
   .project-name {
@@ -162,20 +160,26 @@
       text-transform: uppercase;
       width: 100px;
     }
+  }
 
-    .edit {
-      background-color: $dark-blue-sky;
+  .edit {
+    background-color: $dark-blue-sky;
 
-      &:hover {
-        background-color: lighten($dark-blue-sky, 10%);
-      }
+    &:hover {
+      background-color: lighten($dark-blue-sky, 10%);
     }
-    .delete {
-      background-color: $main-red;
+  }
 
-      &:hover {
-        background-color: lighten($main-red, 10%);
-      }
+  .delete {
+    background-color: $main-red;
+
+    &:hover {
+      background-color: lighten($main-red, 10%);
     }
+  }
+
+  .project {
+    border-bottom: 1px solid $grey;
+    position: relative;
   }
 }

@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def start
     bypass_humanizer = true
     @message = Message.new(bypass_humanizer)
+    @projects = Project.all
   end
 
   def contact_message
