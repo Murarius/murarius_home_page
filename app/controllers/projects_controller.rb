@@ -1,5 +1,7 @@
 # class ProjectsController < ApplicationController
 class ProjectsController < ApplicationController
+  before_action :must_be_logged_in, only: [:new, :create, :index, :destroy, :edit, :update]
+
   def new
     @project = Project.new
     render('new', layout: 'short_layout')

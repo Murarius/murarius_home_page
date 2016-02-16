@@ -22,7 +22,7 @@ module SessionsHelper
 
   def must_be_logged_in
     return if logged_in?
-    flash[:danger] = 'Please log in.'
+    flash[:error] = 'Please log in.'
     redirect_to root_url
   end
 
