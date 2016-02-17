@@ -13,7 +13,9 @@ class Message
   attr_accessor :subject
   attr_accessor :content
 
-  validates :from, presence: true
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\Z/
+  validates :from, presence: true, format: { with: VALID_EMAIL_REGEX, multiline: true }
+
   validates :subject, presence: true
   validates :content, presence: true
   validates :humanizer_answer, presence: true
