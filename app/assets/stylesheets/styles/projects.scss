@@ -81,10 +81,10 @@
 #edit-project,
 #all-projects {
   @extend #contact;
+  margin-bottom: 150px;
 }
 
 #all-projects {
-
 
   .project-name {
     color: darken($ground-border, 15%);
@@ -181,5 +181,44 @@
   .project {
     border-bottom: 1px solid $grey;
     position: relative;
+  }
+}
+
+#fake-file-input {
+
+  #upload-btn {
+    border-radius: 5px 0 0 5px;
+    border-right: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+    width: 30%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #file-display {
+    border-radius: 0 5px 5px 0;
+    display: inline-block;
+    width: 70%;
+  }
+}
+
+#new-project,
+#edit-project {
+  .img-placeholder {
+    width: 450px;
+    height: 350px;
+    background-size: cover;
+    margin: 5px;
+    background-color: lighten($ground-color, 40%);
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
 }

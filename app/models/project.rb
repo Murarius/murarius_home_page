@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
   validates :when_created, presence: true
   validates :description, presence: true
 
+  mount_uploader :thumb, ThumbUploader
+
   VALID_LINK_REGEX = /\A([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}\Z/
   validates :github_link, format: { with: VALID_LINK_REGEX, multiline: true }
   validates :demo_link, format: { with: VALID_LINK_REGEX, multiline: true }

@@ -2,7 +2,8 @@
   <div class='thumb-container'>
     <div class='thumb-box'></div>
     <h2><%= project.name %></h2>
-    <div class='project-thumb'></div>
+
+    <div class='project-thumb' style="background-image: url('<%= project.thumb.url %>');"></div>
     <div class='thumb-navigation'>
       <div><a href='<%= project.github_link %>'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
       <div><a href='<%= project.demo_link %>'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>

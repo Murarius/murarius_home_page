@@ -1,4 +1,4 @@
-<%= form_for @project do |f| %>
+<%= form_for @project, html: { multipart: true } do |f| %>
   <%= render 'shared/error_messages', object: @project %>
   <div>
     <%= f.label :name %>
@@ -6,7 +6,24 @@
   </div>
   <div>
     <%= f.label :thumb %>
-    <%= f.text_field :thumb, autocomplete: 'off' %>
+    <%= f.file_field :thumb, style: "display:none;" %>
+
+    <% if @project.thumb? -%>
+      <div class='img-placeholder' style="background-image: url('<%= @project.thumb.url %>')"></div>
+    <% end -%>
+
+    <%= f.hidden_field :thumb_cache %>
+    <div id='fake-file-input'>
+      <a id="upload-btn" class="btn"><i class="fa fa-folder-open"></i> Choose file</a>
+      <input id="file-display" type="text" disabled>
+    </div>
+
+    <script>
+      jQuery(function() {
+        $('#file-display').val('<%= @project.thumb_cache %>');
+        console.log('<%= @project.thumb_identifier %>');
+      });
+    </script>
   </div>
   <div>
     <%= f.label :github_link %>

@@ -2,7 +2,7 @@
   <div class='project-name'><%= project.name %></div>
   <div class='project-content'>
     <%#= project.thumb %>
-    <div class='thumb'></div>
+    <div class='thumb' style="background-image: url('<%= project.thumb.url %>');"></div>
     <%= project.description %>
     <div style='clear:both;'></div>
   </div>
