@@ -21,7 +21,7 @@
 }
 
 .face {
-  background-image: url('face.jpg');
+  background-image: asset-url('face.jpg');
   background-size: cover;
   border: 12px solid $main-red;
   border-radius: 20px;
