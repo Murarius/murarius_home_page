@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-gem 'turbolinks'
+# gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -21,7 +21,9 @@ gem 'font-awesome-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'humanizer', '2.6.2'
-gem 'carrierwave'
+gem 'carrierwave', '0.10.0'
+gem 'fog-aws', '1.37'
+gem 'fog', '0.8.1'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

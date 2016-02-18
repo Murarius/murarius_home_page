@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     project = Project.find(params[:id])
+    project.remove_thumb! if project.thumb?
     project.destroy
     flash[:success] = 'Project was successfully destroyed.'
     redirect_to projects_path
