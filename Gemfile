@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
-# gem 'pg', '0.18.4'
-gem 'sqlite3'
+gem 'pg', '0.18.4'
+# gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -22,8 +22,8 @@ gem 'font-awesome-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'humanizer', '2.6.2'
 gem 'carrierwave', '0.10.0'
-gem 'fog-aws', '1.37'
-gem 'fog', '0.8.1'
+gem 'fog-aws', '0.8.1'
+gem 'fog', '1.37'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
