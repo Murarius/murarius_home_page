@@ -52,7 +52,7 @@
     background-color: rgba($ground-border, .5);
     border-bottom: 2px solid $ground-border;
     border-top: 2px solid $ground-border;
-    width: 100%;
+
     color: $white;
     font-weight: 30px;
     padding: 5px 0 5px 30px;
@@ -63,18 +63,18 @@
     text-transform: uppercase;
     top: 30px;
     transition: all .2s;
+    width: 100%;
     z-index: 3;
   }
 
   .project-thumb {
-
     background-color: $white;
     background-image: asset-url('work/murarius_page.png');
     background-position: center;
     background-size: cover;
+    opacity: .8;
     bottom: 0;
     left: 0;
-    opacity: .8;
     position: absolute;
     right: 0;
     top: 0;

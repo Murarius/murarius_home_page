@@ -8,7 +8,7 @@ jQuery(function() {
     tmpImg.src = bg;
     tmpImg.onload = function() {
       $(base).show();
-      $(base).next().hide();
+      $(base).next().fadeOut();
     };
   });
 });
