@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'font-awesome-rails'
-# gem 'autoprefixer-rails'
+gem 'autoprefixer-rails'
 # gem 'client_side_validations', '~> 4.2.0'
 
 # Use ActiveModel has_secure_password
