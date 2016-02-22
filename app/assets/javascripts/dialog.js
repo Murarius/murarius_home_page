@@ -1,7 +1,7 @@
 jQuery(function() {
 
   $(document).on('click', "#password-change, .login_click", function(evt) {
-    evt.prevent_default;
+    evt.preventDefault();
     var url = $(this).attr('href');
     showDialog(url);
     return false;

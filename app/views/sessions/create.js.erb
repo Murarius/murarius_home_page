@@ -3,7 +3,7 @@
   $('#footer_div').html("<%= escape_javascript(render 'layouts/footer' ) %>");
   $('#navbar_div').html("<%= escape_javascript(render 'layouts/navbar' ) %>");
   $('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");
-  $('#project_controll_container').html("<%= escape_javascript(render 'shared/projects_controll' ) %>");
+  $('#side_menu_container').html("<%= escape_javascript(render 'shared/side_menu' ) %>");
 <% else %>
   $('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");
   $('#session_login').val('');
