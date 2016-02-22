@@ -1,9 +1,7 @@
 # module SessionsHelper
 module SessionsHelper
   def log_in(owner)
-    remember_token = Owner.new_remember_token
-    session[:remember_token] = remember_token
-    owner.update_attribute(:remember_token, Owner.digest(remember_token))
+    session[:remember_token] = owner.id
     self.current_owner = owner
   end
 
@@ -16,8 +14,7 @@ module SessionsHelper
   end
 
   def current_owner
-    remember_token = Owner.digest(session[:remember_token])
-    @current_owner ||= Owner.find_by(remember_token: remember_token)
+    @current_owner ||= Owner.find(session[:remember_token]) if session[:remember_token]
   end
 
   def must_be_logged_in
@@ -27,7 +24,6 @@ module SessionsHelper
   end
 
   def sign_out
-    current_owner.update_attribute(:remember_token, Owner.digest(Owner.new_remember_token))
     session.delete(:remember_token)
     self.current_owner = nil
   end
