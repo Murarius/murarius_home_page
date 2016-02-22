@@ -1,5 +1,5 @@
 <% if logged_in? -%>
-  <div id='projects-controll'>
+  <div id='side-menu'>
     <div>
       <%= link_to "<i class='fa fa-bars'></i>".html_safe, projects_path , class: 'project_navigation' %>
       <span>Projects</span>
@@ -9,7 +9,7 @@
       <span>New Project</span>
     </div>
     <div>
-      <%= link_to "<i class='fa fa-unlock-alt'></i>".html_safe, edit_password_path(@current_owner) , class: 'project_navigation' %>
+      <%= link_to "<i class='fa fa-unlock-alt'></i>".html_safe, edit_password_path(@current_owner) , class: 'project_navigation', id: 'password-change' %>
       <span>Edit Password</span>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <% if @login_success %>
-  $('#login_dialog').dialog('close');
+  $('#dialog').dialog('close');
   $('#footer_div').html("<%= escape_javascript(render 'layouts/footer' ) %>");
   $('#navbar_div').html("<%= escape_javascript(render 'layouts/navbar' ) %>");
   $('#flash-main').html("<%= escape_javascript(render 'shared/flash_messages' ) %>");

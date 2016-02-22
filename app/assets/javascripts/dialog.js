@@ -1,14 +1,13 @@
 jQuery(function() {
 
-  $(document).on('click', '.login_click', function(evt) {
-    evt.prevent_default;
-    var url = $('.login_click').attr('href');
+  $(document).on('click', '#password-change, .login_click', function(evt) {
+    evt.prevent_default();
+    var url = $(this).attr('href');
     showDialog(url);
     return false;
   });
-  // end click
 
-  $('#login_dialog').dialog({ //create dialog, but keep it closed
+  $('#dialog').dialog({ //create dialog, but keep it closed
     position: {
       my: 'center center-100',
       at: 'center',
@@ -22,9 +21,9 @@ jQuery(function() {
 });
 
 function showDialog(url) { //load content and open dialog
-  $('#login_dialog').html('');
-  $('#login_dialog').load(url + ' .content', function() {
+  $('#dialog').html('');
+  $('#dialog').load(url + ' .content', function() {
     $('#session_login').focus();
   });
-  $('#login_dialog').dialog('open');
+  $('#dialog').dialog('open');
 }
