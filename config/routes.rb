@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   root 'pages#start'
 
   resources :projects, only: [:index, :new, :create, :edit, :update, :destroy]
-  get 'login'       => 'sessions#new'
-  post 'login'      => 'sessions#create'
-  delete 'logout'   => 'sessions#destroy'
-  post 'contact_message'    => 'pages#contact_message'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  post 'contact_message', to: 'pages#contact_message'
+
+  get 'password/:id', to: 'owners#edit_password', as: 'edit_password'
+  patch 'password/:id', to: 'owners#update_password', as: 'password'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

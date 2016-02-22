@@ -23,7 +23,7 @@
   div {
     height: 50px;
     position: relative;
-    width: 200px;
+    width: 230px;
 
     a {
       @extend %shadow-1-6;
@@ -63,7 +63,7 @@
       color: $main-red;
       display: inline-block;
       font-weight: bold;
-      left: -180px;
+      left: -210px;
       line-height: 50px;
       padding-right: 15px;
       position: absolute;

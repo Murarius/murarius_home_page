@@ -8,5 +8,9 @@
       <%= link_to "<i class='fa fa-plus'></i>".html_safe, new_project_path , class: 'project_navigation' %>
       <span>New Project</span>
     </div>
+    <div>
+      <%= link_to "<i class='fa fa-unlock-alt'></i>".html_safe, edit_password_path(@current_owner) , class: 'project_navigation' %>
+      <span>Edit Password</span>
+    </div>
   </div>
 <% end -%>
