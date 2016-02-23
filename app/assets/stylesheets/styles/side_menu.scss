@@ -4,6 +4,7 @@
   margin-top: -50px;
   position: fixed;
   top: 50%;
+  width: 280px;
 
   div:first-of-type a {
     border-radius: 0 15px 0 0;
@@ -18,7 +19,6 @@
   div {
 
     a {
-
       &:hover {
         border-right: 4px solid $white;
       }
@@ -31,7 +31,7 @@
     span {
       background-color: rgba($ground-color, .6);
       left: -210px;
-      padding-right: 15px;
+      padding-right: 5px;
       text-align: right;
       z-index: 3;
     }

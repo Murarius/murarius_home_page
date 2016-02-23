@@ -2,6 +2,7 @@
   background: $light-blue-sky; // for older browsers
   background: linear-gradient($light-blue-sky, $light-blue-sky , $dark-blue-sky);
   background-attachment: fixed;
+  //box-sizing: border-box;
   height: 100vh;
   margin: 0 auto;
   overflow: hidden;

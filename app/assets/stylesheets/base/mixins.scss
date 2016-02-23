@@ -44,6 +44,7 @@
 
 %side-menu {
   font-size: 30px;
+  overflow: hidden;
   z-index: 5;
 
   div {
@@ -93,7 +94,25 @@
   }
 }
 
+%button {
+  .btn {
+    background-color: $ground-color;
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    color: $black;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: lighten($ground-color, 20%);
+    }
+  }
+}
+
 %form {
+  @extend %button;
   form {
     width: 70%;
   }
@@ -114,28 +133,13 @@
     border-radius: 5px;
     box-sizing: border-box;
     padding: 3px;
-    width: 100%;
+    //width: 100%;
 
     &:active,
     &:focus {
       background-color: lighten($ground-color, 30%);
       border: 3px solid $ground-color;
       outline: 0;
-    }
-  }
-
-  .btn {
-    background-color: $ground-color;
-    border: 3px solid $ground-border;
-    border-radius: 5px;
-    color: $black;
-    margin-left: 5px;
-    margin-top: 10px;
-    padding: 5px 20px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: lighten($ground-color, 20%);
     }
   }
 }

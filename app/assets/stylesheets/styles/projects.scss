@@ -1,11 +1,16 @@
 #new-project,
-#edit-project,
-#all-projects {
+#edit-project {
   @extend %form;
   margin-bottom: 150px;
+  input,
+  textarea {
+    width: 100%;
+  }
 }
 
 #all-projects {
+  @extend %button;
+  margin-bottom: 150px;
 
   .project-name {
     color: darken($ground-border, 15%);
