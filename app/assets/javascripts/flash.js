@@ -7,4 +7,7 @@ jQuery(function() {
   $('#flash-main').bind('DOMSubtreeModified', function(e) {
     $(this).children().delay(2000).fadeOut('slow');
   });
+
+  $('#flash-main').children().delay(2000).fadeOut('slow');
+
 });
