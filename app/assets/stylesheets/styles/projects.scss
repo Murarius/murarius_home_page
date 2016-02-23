@@ -1,7 +1,7 @@
 #new-project,
 #edit-project,
 #all-projects {
-  @extend #contact;
+  @extend %form;
   margin-bottom: 150px;
 }
 

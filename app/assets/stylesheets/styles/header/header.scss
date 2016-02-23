@@ -34,83 +34,31 @@
 }
 
 .cloud-1 {
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  animation-name: cloud;
-  animation-timing-function: linear;
-  left: -1000px;
-  position: absolute;
-  top: 550px;
+  @include animated-cloud(6s, 400px, 400px, 550px);
   z-index: -3;
-
-  img {
-    height: 400px;
-    width: 400px;
-  }
 }
 
 .cloud-2 {
-  animation-duration: 14s;
-  animation-iteration-count: infinite;
-  animation-name: cloud;
-  animation-timing-function: linear;
-  position: absolute;
-  top: 150px;
+  @include animated-cloud(14s, 200px, 200px, 150px);
   z-index: -1;
-
-  img {
-    height: 200px;
-    width: 200px;
-  }
 }
 
 .cloud-3 {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-name: cloud;
-  animation-timing-function: linear;
-  position: absolute;
-  top: 250px;
-
-  img {
-    height: 300px;
-    width: 300px;
-  }
+  @include animated-cloud(10s, 300px, 300px, 250px);
 }
 
 .cloud-4 {
-  animation-duration: 18s;
-  animation-iteration-count: infinite;
-  animation-name: cloud;
-  animation-timing-function: linear;
-  position: absolute;
-  top: -130px;
-
-  img {
-    height: 500px;
-    width: 500px;
-  }
+  @include animated-cloud(18s, 500px, 500px, -130px);
 }
 
 .cloud-5 {
-  animation-duration: 22s;
-  animation-iteration-count: infinite;
-  animation-name: cloud;
-  animation-timing-function: linear;
-  position: absolute;
-  top: 400px;
+  @include animated-cloud(22s, 250px, 250px, 400px);
   z-index: -1;
-
-  img {
-    height: 250px;
-    width: 250px;
-  }
 }
 
 
 .ground {
   background-image: asset-url('ground2.svg');
-  //background-position: center;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -131,78 +79,4 @@
   position: absolute;
   width: 100%;
   z-index: -2;
-}
-
-
-.header-nav {
-  bottom: 0;
-  font-size: 30px;
-  position: absolute;
-  right: 0;
-
-  div:first-of-type a {
-    border-top: 4px solid $black;
-    border-radius: 15px 0 0;
-  }
-
-  div:last-of-type a {
-    border-bottom: 4px solid $black;
-
-  }
-
-  div {
-    height: 50px;
-    overflow: hidden;
-    position: relative;
-    width: 230px;
-
-    a {
-      @extend %shadow-1-6;
-      background-color: $main-red;
-      border-left: 4px solid $black;
-      border-right: 4px solid $black;
-      box-sizing: border-box;
-      color: $footer-main-text;
-      display: inline-block;
-      height: 50px;
-      line-height: 50px;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      width: 50px;
-      z-index: 2;
-
-      + span {
-        transition: all .3s;
-      }
-
-      &:hover {
-        background-color: lighten($main-red, 20%);
-        border-left: 4px solid $white;
-      }
-
-      &:hover i {
-        @extend %button-flash-effect;
-      }
-
-      &:hover + span {
-        left: 0;
-        transition: all .3s;
-      }
-    }
-
-    span {
-      background-color: rgba(255, 255, 255, .6);
-      color: $main-red;
-      display: inline-block;
-      font-weight: bold;
-      left: 230px;
-      line-height: 50px;
-      padding-left: 5px;
-      position: absolute;
-      text-shadow: $black 0 0 1px;
-      top: 0;
-      width: 100%;
-    }
-  }
 }

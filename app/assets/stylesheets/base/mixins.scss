@@ -16,6 +16,20 @@
   }
 }
 
+@mixin animated-cloud($duration, $height, $width, $top) {
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-name: cloud;
+  animation-timing-function: linear;
+  position: absolute;
+  top: $top;
+
+  img {
+    height: $height;
+    width: $width;
+  }
+}
+
 %shadow-1-6 {
   text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
                $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
@@ -26,4 +40,102 @@
   animation-iteration-count: infinite;
   animation-name: light;
   animation-timing-function: linear;
+}
+
+%side-menu {
+  font-size: 30px;
+  z-index: 5;
+
+  div {
+    height: 50px;
+    position: relative;
+    width: 230px;
+
+    a {
+      @extend %shadow-1-6;
+      background-color: $main-red;
+      border-left: 4px solid $black;
+      border-right: 4px solid $black;
+      box-sizing: border-box;
+      color: $footer-main-text;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      position: absolute;
+      text-align: center;
+      width: 50px;
+      z-index: 6;
+
+      &:hover {
+        background-color: lighten($main-red, 20%);
+      }
+
+      &:hover i {
+        @extend %button-flash-effect;
+      }
+
+      &:hover + span {
+        transition: all .3s;
+      }
+    }
+
+    span {
+      color: $main-red;
+      display: inline-block;
+      font-weight: bold;
+      line-height: 50px;
+      position: absolute;
+      text-shadow: $black 0 0 1px;
+      top: 0;
+      transition: all .3s;
+      width: 100%;
+    }
+  }
+}
+
+%form {
+  form {
+    width: 70%;
+  }
+
+  label {
+    color: $ground-border;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    background-color: lighten($ground-color, 40%);
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 3px;
+    width: 100%;
+
+    &:active,
+    &:focus {
+      background-color: lighten($ground-color, 30%);
+      border: 3px solid $ground-color;
+      outline: 0;
+    }
+  }
+
+  .btn {
+    background-color: $ground-color;
+    border: 3px solid $ground-border;
+    border-radius: 5px;
+    color: $black;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: lighten($ground-color, 20%);
+    }
+  }
 }
