@@ -3,4 +3,8 @@ jQuery(function() {
     e.preventDefault();
     $(this).parent().parent().remove();
   });
+
+  $('#flash-main').bind('DOMSubtreeModified', function(e) {
+    $(this).children().delay(2000).fadeOut('slow');
+  });
 });
