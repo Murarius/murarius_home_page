@@ -20,14 +20,7 @@ body {
   }
 
   @media screen and (max-width: 1000px) {
-    .container {
-      width: 750px;
-    }
-
-    .author {
-      display: none;
-    }
-
+    .author,
     .author-1000 {
       display: none;
     }
@@ -36,28 +29,17 @@ body {
       display: block;
     }
 
-    .main {
-      width: 750px;
-    }
-
-    .footer-content {
+    .container,
+    .main,
+    .footer-content,
+    #flash-main,
+    #error-main .error-explanation,
+    .tech-skill .tech-skill-desc {
       width: 750px;
     }
 
     .navbar-content {
       width: 800px;
-    }
-
-    #flash-main {
-      width: 750px;
-    }
-
-    #error-main .error-explanation {
-      width: 750px;
-    }
-
-    .tech-skill .tech-skill-desc {
-      width: 750px;
     }
   }
 }

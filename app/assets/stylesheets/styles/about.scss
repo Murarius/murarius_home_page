@@ -1,23 +1,6 @@
 #about {
   font-family: 'Kalam', sans-serif;
   margin-bottom: 60px;
-
-  h2 {
-    color: darken($ground-color, 5%);
-    letter-spacing: 2px;
-    text-shadow: 0 0 1px $black;
-  }
-
-  h3 {
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-
-  p {
-    font-size: 20px;
-    margin-top: 0;
-    text-align: justify;
-  }
 }
 
 .face {

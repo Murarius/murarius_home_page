@@ -20,3 +20,10 @@
   text-shadow: $black 0 0 1px, $black 0 0 1px, $black 0 0 1px,
                $black 0 0 1px, $black 0 0 1px, $black 0 0 1px;
 }
+
+%button-flash-effect {
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-name: light;
+  animation-timing-function: linear;
+}

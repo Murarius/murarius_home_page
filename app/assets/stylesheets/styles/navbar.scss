@@ -29,10 +29,7 @@ nav {
       background-color: lighten($ground-color, 20%);
 
       i {
-        animation-duration: .2s;
-        animation-iteration-count: infinite;
-        animation-name: light;
-        animation-timing-function: linear;
+        @extend %button-flash-effect;
       }
     }
   }

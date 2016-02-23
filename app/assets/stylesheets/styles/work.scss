@@ -1,11 +1,6 @@
 #work {
   font-size: 20px;
-  padding: 20px 0;
-
-  h1 {
-    font-family: 'Kalam', sans-serif;
-    margin-bottom: 30px;
-  }
+  margin-bottom: 60px;
 }
 
 .thumb-container {
@@ -123,10 +118,7 @@
         width: 160px;
 
         i {
-          animation-duration: .2s;
-          animation-iteration-count: infinite;
-          animation-name: light;
-          animation-timing-function: linear;
+          @extend %button-flash-effect;
         }
       }
     }

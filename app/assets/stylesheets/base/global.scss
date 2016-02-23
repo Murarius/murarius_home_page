@@ -4,9 +4,22 @@
 
   h1 {
     color: $main-red;
+    font-family: 'Kalam', sans-serif;
     letter-spacing: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     text-shadow: 1px 0 0 $black, -1px 0 0 $black, 0 1px 0 $black, 0 -1px 0 $black;
+  }
+
+  h2 {
+    color: darken($ground-color, 5%);
+    letter-spacing: 2px;
+    text-shadow: 0 0 1px $black;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 0;
+    text-align: justify;
   }
 }
 
@@ -14,7 +27,7 @@
   bottom: 0;
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
 }
 
 .flash {
@@ -47,8 +60,8 @@
   }
 
   h2 {
-    margin: 0;
     font-size: 16px;
+    margin: 0;
   }
 
   ul {
@@ -63,14 +76,14 @@
     border-radius: 0;
     margin: 0 auto;
     padding: 10px;
-    width: 960px;
     position: relative;
+    width: 960px;
   }
 
   .close {
-    position: absolute;
-    top: 20px;
-    right: 0;
     color: $main-red;
+    position: absolute;
+    right: 0;
+    top: 20px;
   }
 }
