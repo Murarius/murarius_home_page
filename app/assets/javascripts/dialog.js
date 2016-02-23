@@ -3,7 +3,9 @@ jQuery(function() {
   $(document).on('click', "#password-change, .login_click", function(evt) {
     evt.preventDefault();
     var url = $(this).attr('href');
-    showDialog(url);
+    var title;
+    url == '/login' ? title = 'LOGIN' : title = 'PASSWORD CHANGE';
+    showDialog(url, title);
     return false;
   });
 
@@ -20,8 +22,9 @@ jQuery(function() {
 
 });
 
-function showDialog(url) { //load content and open dialog
+function showDialog(url, title) { //load content and open dialog
   $('#dialog').html('');
+  $('#ui-id-1').html(title);
   $('#dialog').load(url + ' .content', function() {
     $('#session_login').focus();
   });

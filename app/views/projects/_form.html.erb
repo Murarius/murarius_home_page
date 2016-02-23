@@ -20,8 +20,7 @@
 
     <script>
       jQuery(function() {
-        $('#file-display').val('<%= @project.thumb_cache %>');
-        console.log('<%= @project.thumb_identifier %>');
+        $('#file-display').val('<%= @project.thumb_cache || @project.thumb_identifier  %>');
       });
     </script>
   </div>
