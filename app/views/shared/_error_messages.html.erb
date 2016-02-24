@@ -1,7 +1,7 @@
 <% if object.errors.any? -%>
   <div id='error-main'>
     <div class='error-explanation'>
-      <h2><i class="fa fa-exclamation-triangle"></i><%= pluralize(object.errors.count, 'error') %> prohibited this message from being send:</h2>
+      <h2 class='errors'><i class="fa fa-exclamation-triangle"></i><%= pluralize(object.errors.count, 'error') %> prohibited this message from being send:</h2>
       <ul>
         <% object.errors.full_messages.each do |message| %>
           <li><%= message %></li>

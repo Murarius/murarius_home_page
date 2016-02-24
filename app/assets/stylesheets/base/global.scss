@@ -21,6 +21,11 @@
     margin-top: 0;
     text-align: justify;
   }
+
+  .errors {
+    color: $main-red;
+    text-shadow: none;
+  }
 }
 
 #flash-main {
