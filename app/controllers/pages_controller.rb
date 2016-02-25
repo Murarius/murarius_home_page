@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def start
     bypass_humanizer = true
     @message = Message.new(bypass_humanizer)
-    @projects = Project.all
+    @projects = Project.all.order(when_created: :desc)
   end
 
   def contact_message

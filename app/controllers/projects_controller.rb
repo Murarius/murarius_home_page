@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order(when_created: :desc)
     render('index', layout: 'short_layout')
   end
 

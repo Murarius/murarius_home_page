@@ -6,8 +6,12 @@
     <div class='project-thumb' style="background-image: url('<%= project.thumb.url %>');"></div>
     <div class='spinner'><i class="fa fa-spinner fa-spin"></i></div>
     <div class='thumb-navigation'>
-      <div><a href='http://<%= project.github_link %>'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
-      <div><a href='http://<%= project.demo_link %>'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>
+      <% unless project.github_link.nil? || project.github_link.empty? -%>
+        <div><a href='http://<%= project.github_link %>'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
+      <% end -%>
+      <% unless project.demo_link.nil? || project.demo_link.empty? -%>
+        <div><a href='http://<%= project.demo_link %>'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>
+      <% end -%>
       <div style='clear:both'></div>
     </div>
   </div>
@@ -15,7 +19,7 @@
     <p class='project-description'>
       <%= project.description %>
     </p>
-    <p class='project-date'><%= project.when_created %></a>
+    <p class='project-date'><%= project.when_created.strftime("%B %Y") %></a>
   </div>
   <div style='clear:both'></div>
 </div>

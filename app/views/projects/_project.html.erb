@@ -7,8 +7,20 @@
     <div style='clear:both;'></div>
   </div>
   <div>
-    <div class='link'>Github link: <%= link_to project.github_link, "http://"+project.github_link %></div>
-    <div class='link'>Live demo link: <%= link_to project.demo_link, "http://"+project.github_link %></div>
+    <div class='link'>Github link:
+      <% unless project.github_link.nil? || project.github_link.empty? -%>
+        <%= link_to project.github_link, "http://"+project.github_link %>
+      <% else %>
+        "there is no link"
+      <% end -%>
+    </div>
+    <div class='link'>Live demo link:
+      <% unless project.demo_link.nil? || project.demo_link.empty? -%>
+      <%= link_to project.demo_link, "http://"+project.github_link %>
+      <% else %>
+        "there is no link"
+      <% end -%>
+    </div>
     <div style='clear:both;'></div>
   </div>
   <div class='when'>
