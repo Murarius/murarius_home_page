@@ -9,14 +9,14 @@
   <div>
     <div class='link'>Github link:
       <% unless project.github_link.nil? || project.github_link.empty? -%>
-        <%= link_to project.github_link, "http://"+project.github_link %>
+        <%= link_to project.github_link, "http://"+project.github_link, target: '_blank' %>
       <% else %>
-        "there is no link"
+        <span class='no-link'>"there is no link"</span>
       <% end -%>
     </div>
     <div class='link'>Live demo link:
       <% unless project.demo_link.nil? || project.demo_link.empty? -%>
-      <%= link_to project.demo_link, "http://"+project.github_link %>
+      <%= link_to project.demo_link, "http://"+project.github_link, target: '_blank' %>
       <% else %>
         "there is no link"
       <% end -%>

@@ -39,7 +39,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     if @project.update_attributes(project_params)
       flash[:success] = 'Project was successfully edited.'
-      redirect_to root_url
+      redirect_to projects_path
     else
       render('edit', layout: 'short_layout')
     end
