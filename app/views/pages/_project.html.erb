@@ -7,10 +7,10 @@
     <div class='spinner'><i class="fa fa-spinner fa-spin"></i></div>
     <div class='thumb-navigation'>
       <% unless project.github_link.nil? || project.github_link.empty? -%>
-        <div><a href='http://<%= project.github_link %>'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
+        <div><a href="http://<%= project.github_link %>" target='_blank'><i class="fa fa-github"></i><span>GitHub Link</span></a></div>
       <% end -%>
       <% unless project.demo_link.nil? || project.demo_link.empty? -%>
-        <div><a href='http://<%= project.demo_link %>'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>
+        <div><a href="http://<%= project.demo_link %>" target='_blank'><i class="fa fa-cloud"></i><span>Live Demo</span></a></div>
       <% end -%>
       <div style='clear:both'></div>
     </div>
