@@ -1,5 +1,5 @@
 jQuery(function() {
-  $('nav').hide();
+  //$('nav').hide();
 
   $(window).scroll(function() {
     var position = $('.main').offset().top;
